@@ -9,13 +9,14 @@ export function changeCategory(category) {
   };
 }
 
-
 export function getCategoriesSuccess(categories) {
   return {
     type: actionTypes.GET_CATEGORIES_SUCCESS,
-    payload:categories
-  }
+    payload: categories
+  };
 }
+
+
 
 export function getCategories() {
   return function(dispatch) {
@@ -26,3 +27,4 @@ export function getCategories() {
       .then(result => dispatch(getCategoriesSuccess(result)));
   };
 }
+
