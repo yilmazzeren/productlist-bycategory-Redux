@@ -6,12 +6,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+  NavLink
 } from "reactstrap";
+import CartSummary from "../cart/CartSummary";
 
 const Navi = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,16 +31,7 @@ const Navi = props => {
               </NavLink>
             </NavItem>
           </Nav>
-          <UncontrolledDropdown>
-            <DropdownToggle caret>Dropdown</DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
+          <CartSummary />
         </Collapse>
       </Navbar>
     </div>
